@@ -5,6 +5,6 @@ import com.example.questapi_015.R
 object DestinasiDetail : DestinasiNavigasi {
     override val route = "item_detail"
     override val titleRes = R.string.detail_siswa
-    const val SISWA_ID = "itemId"
-    val routeWithArgs = "$route/{$SISWA_ID}"
+    const val itemIdArg = "idSiswa"
+    val routeWithArgs = "$route/{$itemIdArg}"
 }
