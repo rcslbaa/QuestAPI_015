@@ -105,4 +105,18 @@ private fun BodyDetailDataSiswa(
         verticalArrangement = Arrangement.spacedBy(
             dimensionResource(id = R.dimen.padding_medium)
         )
-    )
+    ) {
+        var deleteConfirmationRequired by rememberSaveable {
+            mutableStateOf(false)
+        }
+
+        when (statusUiDetail) {
+            is StatusUiDetail.Success -> {
+                DetailDataSiswa(
+                    siswa = statusUiDetail.satusiswa,
+                    modifier = Modifier.fillMaxWidth()
+                )
+            }
+            else -> {}
+        }
+
